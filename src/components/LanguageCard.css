@@ -1,0 +1,59 @@
+.lang-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  padding: 2.2rem 1.5rem 1.8rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 4px solid var(--card-color);
+  box-shadow: 0 12px 0 color-mix(in srgb, var(--card-color) 35%, transparent), 0 16px 30px var(--shadow);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  overflow: hidden;
+}
+
+.lang-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 38%;
+  background: var(--card-color);
+  opacity: 0.12;
+}
+
+.lang-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 0 color-mix(in srgb, var(--card-color) 35%, transparent), 0 22px 38px var(--shadow);
+}
+
+.lang-card-badge {
+  font-size: 2.6rem;
+  position: relative;
+}
+
+.lang-card-sample {
+  font-family: var(--font-display);
+  font-size: 3.4rem;
+  font-weight: 800;
+  color: var(--card-color);
+  line-height: 1;
+  position: relative;
+}
+
+.lang-card-title {
+  font-size: 1.6rem;
+  color: var(--text);
+}
+
+.lang-card-native {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.lang-card-cta {
+  margin-top: 0.6rem;
+  font-weight: 800;
+  color: var(--card-color);
+}

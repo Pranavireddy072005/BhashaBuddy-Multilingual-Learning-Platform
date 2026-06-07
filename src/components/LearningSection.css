@@ -1,0 +1,127 @@
+.learn-head {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.learn-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  color: var(--learn-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.learn-native {
+  font-size: 1.3rem;
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.learn-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.learn-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 3px solid var(--tab-color);
+  color: var(--text);
+  font-weight: 800;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.learn-tab:hover {
+  transform: translateY(-3px);
+}
+
+.learn-tab.active {
+  background: var(--tab-color);
+  color: #fff;
+}
+
+.learn-tab-native {
+  font-size: 0.85rem;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.learn-progress {
+  max-width: 640px;
+  margin: 0 auto 2rem;
+  padding: 1.2rem 1.5rem;
+}
+
+.learn-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.learn-body:has(.learn-trace) .learn-main {
+  align-self: start;
+}
+
+.learn-body:not(:has(.learn-trace)) {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.learn-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.learn-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.learn-count {
+  font-weight: 800;
+  color: var(--text-soft);
+  font-size: 1.1rem;
+}
+
+.learn-mark {
+  width: 100%;
+}
+
+.learn-mark:disabled {
+  opacity: 0.85;
+  cursor: default;
+}
+
+.learn-trace {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.learn-trace-title {
+  color: var(--text);
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .learn-body {
+    grid-template-columns: 1fr !important;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

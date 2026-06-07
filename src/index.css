@@ -1,0 +1,188 @@
+:root {
+  /* Brand palette */
+  --rainbow-pink: #ff6b9d;
+  --rainbow-orange: #ff9f43;
+  --rainbow-yellow: #feca57;
+  --rainbow-green: #1dd1a1;
+  --rainbow-blue: #54a0ff;
+  --rainbow-purple: #5f27cd;
+
+  /* Light theme tokens */
+  --bg: #fff8f0;
+  --bg-soft: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #fff1e6;
+  --text: #2d2438;
+  --text-soft: #6b5e7a;
+  --border: #ffe0cc;
+  --shadow: rgba(255, 107, 157, 0.18);
+  --primary: #ff6b9d;
+  --primary-ink: #ffffff;
+  --accent: #54a0ff;
+  --good: #1dd1a1;
+  --star: #feca57;
+
+  --radius: 24px;
+  --radius-sm: 14px;
+  --font-display: "Baloo 2", "Noto Sans Telugu", "Noto Sans Devanagari", "Comic Sans MS", system-ui, sans-serif;
+  --font-body: "Nunito", "Noto Sans Telugu", "Noto Sans Devanagari", system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1426;
+  --bg-soft: #221a33;
+  --surface: #2a2140;
+  --surface-2: #322651;
+  --text: #f4eefb;
+  --text-soft: #b6a8cc;
+  --border: #3d2f5c;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --primary: #ff6b9d;
+  --primary-ink: #ffffff;
+  --accent: #54a0ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--bg);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, .display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Layout */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 5rem;
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--primary-ink);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.12), 0 12px 22px var(--shadow);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.12), 0 6px 12px var(--shadow);
+}
+
+.btn-lg {
+  font-size: 1.35rem;
+  padding: 1.1rem 2.4rem;
+}
+
+.btn-ghost {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 6px 0 var(--border), 0 8px 16px var(--shadow);
+}
+
+.btn-accent { background: var(--accent); }
+.btn-green { background: var(--good); }
+
+/* Card */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px var(--shadow);
+  border: 3px solid var(--border);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+@keyframes burst {
+  0% { transform: scale(0) rotate(0); opacity: 1; }
+  100% { transform: scale(1.6) rotate(140deg); opacity: 0; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.float { animation: float 4s ease-in-out infinite; }
+.pop-in { animation: pop 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28) both; }
+.fade-up { animation: fadeUp 0.5s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,81 @@
+.letter-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  border-color: var(--lc-color);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.letter-card-check {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--good);
+  color: #fff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.letter-card-big {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(6rem, 22vw, 9rem);
+  line-height: 1;
+  color: var(--lc-color);
+  text-align: center;
+}
+
+.letter-card-translit {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--text-soft);
+  text-transform: capitalize;
+  margin-top: -0.6rem;
+}
+
+.letter-card-example {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.1rem;
+  width: 100%;
+}
+
+.letter-card-emoji {
+  font-size: 2.6rem;
+}
+
+.letter-card-word {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.letter-card-word strong {
+  font-size: 1.4rem;
+  color: var(--text);
+  font-family: var(--font-display);
+}
+
+.letter-card-word small {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.letter-card-trace {
+  width: 100%;
+}

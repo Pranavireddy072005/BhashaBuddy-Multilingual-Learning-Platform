@@ -1,0 +1,50 @@
+.tracing-langs {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.tracing-stage {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem;
+  max-width: 820px;
+  margin: 0 auto;
+  border-color: var(--tp-color);
+}
+
+.tracing-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.tracing-big {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 7rem;
+  line-height: 1;
+}
+
+.tracing-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tracing-done {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .tracing-stage {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,173 @@
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.stat {
+  padding: 1.4rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  border-color: var(--s);
+}
+
+.stat-icon {
+  font-size: 2.2rem;
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.4rem;
+  color: var(--s);
+  line-height: 1;
+}
+
+.stat-label {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+}
+
+.dash-panel {
+  padding: 1.6rem;
+}
+
+.dash-panel-title {
+  color: var(--text);
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+}
+
+.dash-langs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.dash-lang-head {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.dash-lang-link {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.dash-overall {
+  margin-top: 1.4rem;
+  padding-top: 1.4rem;
+  border-top: 2px dashed var(--border);
+}
+
+.dash-badges-panel {
+  grid-column: 1 / -1;
+}
+
+.dash-quiz-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+.dash-quiz-stats > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-quiz-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--text);
+}
+
+.dash-quiz-label {
+  color: var(--text-soft);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.dash-quiz-btn {
+  width: 100%;
+}
+
+.dash-empty {
+  color: var(--text-soft);
+  font-weight: 700;
+}
+.dash-empty a {
+  color: var(--primary);
+}
+
+.dash-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.dash-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1.2rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  border: 3px solid var(--border);
+  opacity: 0.6;
+  filter: grayscale(0.8);
+}
+
+.dash-badge.earned {
+  opacity: 1;
+  filter: none;
+  border-color: var(--star);
+  background: color-mix(in srgb, var(--star) 16%, transparent);
+}
+
+.dash-badge-icon {
+  font-size: 2.4rem;
+}
+
+.dash-badge-label {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.dash-badge-lock {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 0.9rem;
+}
+
+.dash-reset {
+  display: block;
+  margin: 2rem auto 0;
+}
+
+@media (max-width: 880px) {
+  .dash-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dash-grid {
+    grid-template-columns: 1fr;
+  }
+}
